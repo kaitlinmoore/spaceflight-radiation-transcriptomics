@@ -1,0 +1,44 @@
+# --- Data: never commit raw or derived data (CLAUDE.md repo convention) ---
+data/
+models/
+results/
+*.parquet
+*.h5
+*.feather
+# Large counts/metadata pulls. Committed synthetic fixtures live under
+# tests/fixtures/ and are deliberately NOT matched by the rules above.
+!tests/fixtures/
+!tests/fixtures/**
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.Python
+
+# --- uv / virtualenv ---
+.venv/
+venv/
+env/
+# uv.lock IS committed (reproducible env); do not ignore it.
+
+# --- Testing / coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
